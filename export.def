@@ -1,0 +1,5 @@
+EXPORTS
+	ContentGetSupportedField
+	ContentGetValue	
+	ContentSetDefaultParams
+	ContentSendStateInformation
