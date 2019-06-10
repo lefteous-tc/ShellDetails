@@ -151,23 +151,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Common Source\BasicINIFile.cpp" />
-    <ClCompile Include="..\Common Source\Logger.cpp" />
-    <ClCompile Include="..\Common Source\PathUtils.cpp" />
-    <ClCompile Include="..\Common Source\PluginUtils.cpp" />
-    <ClCompile Include="..\Common Source\SectionManagerINIFile.cpp" />
+    <ClCompile Include="..\Common\BasicINIFile.cpp" />
+    <ClCompile Include="..\Common\Logger.cpp" />
+    <ClCompile Include="..\Common\PathUtils.cpp" />
+    <ClCompile Include="..\Common\PluginUtils.cpp" />
+    <ClCompile Include="..\Common\SectionManagerINIFile.cpp" />
     <ClCompile Include="ShellColumnInfo.cpp" />
     <ClCompile Include="ShellDetails.cpp" />
     <ClCompile Include="ShellDetailsManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Common Source\BasicINIFile.h" />
-    <ClInclude Include="..\Common Source\contentplug.h" />
-    <ClInclude Include="..\Common Source\Logger.h" />
-    <ClInclude Include="..\Common Source\PathUtils.h" />
-    <ClInclude Include="..\Common Source\PluginUtils.h" />
-    <ClInclude Include="..\Common Source\SectionManagerINIFile.h" />
-    <ClInclude Include="..\Common Source\WinAppHeader.h" />
+    <ClInclude Include="..\Common\BasicINIFile.h" />
+    <ClInclude Include="..\Common\contentplug.h" />
+    <ClInclude Include="..\Common\Logger.h" />
+    <ClInclude Include="..\Common\PathUtils.h" />
+    <ClInclude Include="..\Common\PluginUtils.h" />
+    <ClInclude Include="..\Common\SectionManagerINIFile.h" />
+    <ClInclude Include="..\Common\WinAppHeader.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="ShellColumnInfo.h" />
     <ClInclude Include="ShellDetails.h" />
