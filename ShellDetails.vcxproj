@@ -106,6 +106,8 @@
       <ProfileGuidedDatabase>$(IntDir)$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
       <ImportLibrary>$(IntDir)$(OutDir)$(TargetName).lib</ImportLibrary>
       <ModuleDefinitionFile>exportw.def</ModuleDefinitionFile>
+      <Version>
+      </Version>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -120,6 +122,11 @@
     <Link>
       <AdditionalDependencies>Rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>exportw.def</ModuleDefinitionFile>
+      <Version>
+      </Version>
+      <ProfileGuidedDatabase>$(IntDir)$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(IntDir)$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(IntDir)$(OutDir)$(TargetName).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -141,6 +148,10 @@
       <ProfileGuidedDatabase>$(IntDir)$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
       <ImportLibrary>$(IntDir)$(OutDir)$(TargetName).lib</ImportLibrary>
       <ModuleDefinitionFile>exportw.def</ModuleDefinitionFile>
+      <Version>
+      </Version>
+      <EmbedManagedResourceFile>
+      </EmbedManagedResourceFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -158,6 +169,11 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>Rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Version>
+      </Version>
+      <ProfileGuidedDatabase>$(IntDir)$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(IntDir)$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(IntDir)$(OutDir)$(TargetName).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
