@@ -74,5 +74,8 @@
     <ClInclude Include="..\Common\WinAppHeader.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="..\Common\StringList.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
