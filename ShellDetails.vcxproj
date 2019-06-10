@@ -164,9 +164,11 @@
   <ItemGroup>
     <ClInclude Include="..\Common\BasicINIFile.h" />
     <ClInclude Include="..\Common\contentplug.h" />
+    <ClInclude Include="..\Common\CustomStringList.h" />
     <ClInclude Include="..\Common\Logger.h" />
     <ClInclude Include="..\Common\PathUtils.h" />
     <ClInclude Include="..\Common\PluginUtils.h" />
+    <ClInclude Include="..\Common\Reparse.h" />
     <ClInclude Include="..\Common\SectionManagerINIFile.h" />
     <ClInclude Include="..\Common\StringList.h" />
     <ClInclude Include="..\Common\WinAppHeader.h" />
