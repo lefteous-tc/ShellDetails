@@ -259,3 +259,11 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+package_debug/ShellDetails.exp
+package_debug/ShellDetails.lib
+package_debug/ShellDetails.wdx
+package_debug/ShellDetails.wdx64
+package/ShellDetails.iobj
+package/ShellDetails.ipdb
+package/ShellDetails.wdx
+package/ShellDetails.wdx64
