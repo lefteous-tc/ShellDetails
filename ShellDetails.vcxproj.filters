@@ -80,10 +80,13 @@
     <ClInclude Include="..\Common\Reparse.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ShellDetails.rct">
+    <ResourceCompile Include="ShellDetails.rc">
       <Filter>Ressourcendateien</Filter>
-    </None>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
