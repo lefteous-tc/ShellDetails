@@ -1,0 +1,115 @@
+Version 1.26
+------------
+CHANGED   Added license information.
+FIXED     A certain numeric field type was unsupported.   
+
+
+Version 1.25
+------------
+CHANGED	  Different kind of floating point exception could occur while asking the shell extension for values. The exceptions are now ignored.
+
+
+Version 1.24
+------------
+ADDED	  New option to cast numbers to year dates.
+
+
+Version 1.23
+------------
+
+ADDED     64 bit support
+
+
+Version 1.22
+------------
+FIXED     Yes/No fields (e.g. Protected) weren't supported. They are not supported in the search yet.
+FIXED     Several fields introduced in Windows Vista (e.g. Tag) weren't supported. 
+FIXED     Several numerical fields (e.g. bit rate) weren't supported.
+
+
+Version 1.21
+------------
+FIXED     Corrupted field names in the ANSI version (used when using Total Commander < 7.50).
+
+Version 1.20
+------------
+ADDED     Unicode support.
+
+
+Version 1.12 
+------------
+FIXED     Fields which contained certain not allowed characters had not been reanmed correctly.
+
+
+Version 1.11 
+------------
+FIXED     Accidentally disabled field detection.
+
+
+Version 1.10 
+------------
+ADDED     It's now possible to display a number without thousand separator. To achieve this you have to set UseDefault to 0 and Cast to 3 in the concerning field in the settings file. 
+FIXED     Some memory leaks have been fixed. 
+
+
+Version 1.09 
+------------
+ADDED     It's now possible to cast strings into numeric values. 
+
+
+Version 1.08 
+------------
+FIXED     A huge number of installed shell extension crashed Total Commander while configuring content plug-in use. 
+
+
+Version 1.07 
+------------
+FIXED     The field type had been detected incorrectly in some cases which led to field detection abortion. 
+
+
+Version 1.06 
+------------
+FIXED     If no directory is set manually for field search newly installed shell extensions were not recognized.
+CHANGED   Plugin is no longer compressed with UPX. This caused troubles on some systems. 
+CHANGED   The default path for ShellDetails.ini is now the directory were Wincmd.ini is located. 
+
+
+Version 1.05
+------------
+FIXED     Refresh didn't work properly.
+ADDED     You can now change the caption for every field.
+FIXED     The settings has not been saved in some cases.
+ADDED     If a Shell Extension was installed that contained invalid characters in a field name an error message was displayed. These invalid characters are replaced by an underscore character.
+
+
+Version 1.04
+------------
+FIXED     Some resource leaks have been fixed.
+ADDED     Support for untitled columns has been added.
+CHANGED   Speed improvements especially when many columns are displayed.
+
+Version 1.03
+------------
+ADDED     ShellDetails supports now background processing for custom column view.
+ADDED     New field setting "Processing" added. See "Field Settings" for more information.
+
+
+Version 1.02
+------------
+FIXED     File type of folders wasn't displayed correctly.
+FIXED     Plugin crashed on Windows 9x and Windows NT 4. That doesn't mean it works now on these operating systems. No fields should be available.
+FIXED     Plugin crashed when entering some special folders.
+ADDED     Added support for numeric field value types as well as DateTime and Time values types.
+ADDED     Added support for field settings. See "Field Settings" for more information.
+
+
+Version 1.01
+------------
+CHANGED   Plugin is many times faster than 1.00
+FIXED     Fields values are now displayed always in the right field.
+FIXED     Extra fields for *.lnk files are now displayed.
+
+
+Version 1.00
+------------
+Initial release

@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>ShellDetails</title>
+<link href="./styles/layout.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="content">
+  <h1>ShellDetails 1.26</h1>
+      <p>ShellDetails ist ein Inhaltsplugin f&uuml;r den Total Commander.</p>
+      <h2>Inhaltsverzeichnis</h2>
+      <ol>
+        <li><a href="#description">Plugin-Beschreibung</a></li>
+        <li><a href="#requirements">Systemvorraussetzungen</a></li>
+        <li><a href="#use">Benutzung</a></li>
+        <li><a href="#configuration">Konfiguration</a>
+          <ol>
+            <li><a href="#fieldsearchdir">Verzeichnisse zur Feldsuche</a></li>
+            <li><a href="#fieldsettings">Feldeinstellungen</a></li>
+            <li><a href="#inilocation">ShellDetails.ini Ort</a></li>
+          </ol>
+        </li>
+        <li><a href="#troubleshooting">Problemlösungen</a></li>
+        <li><a href="#bugs_limitations">Bekannte Fehler und Einschränkungen</a></li>
+        <li><a href="#history">Versionschronik</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="#license">Lizenz</a></li>
+      </ol>
+      <h2> 1. Plugin-Beschreibung<a name="description"></a></h2>
+      <p> ShellDetails zeigt alle Windows Explorer-Felder im Total Commander an.<br>
+  Neben Standardfeldern wie Name, Gr&ouml;&szlig;e, Typ, Attributen und verschiedenen Datumswerten gibt es auch noch viele weitere Felder.<br>
+  So kann z.B. der Besitzer einer Datei oder die Seitenanzahl in Dokumenten wie TIFF oder DOC angezeigt werden. <br>
+  Besonders interessant f&uuml;r die Suche sind Metadateninformationen wie Autor, Titel, Thema, Kategorie und Kommentar.<br>
+  F&uuml;r den Bereich Musikdateien d&uuml;rften die Felder Copyright, Interpret, Albumtitel, Jahr, Titelnummer, Genre, Dauer, Bitrate und Gesch&uuml;tzt relevant sein. Einige dieser Felder werden auch von Videodateien unterst&uuml;tzt.<br>
+  In der Kategorie Bilder gibt es die Felder Kameramodell, Bild aufgenommen am und Abmessungen. Hierbei werden nicht nur die Abmessungen von JPEG-Bildern angezeigt, sondern noch von vielen anderen Bildformaten.<br>
+  Au&szlig;erdem gibt es auch noch die Eigenschaften von Anwendungen und Bibliotheken wie Firma, Beschreibung, Dateiversion sowie Produktname und -version.<br>
+  Hinzu kommen noch die Felder, die von ShellExtensions angeboten werden. Hier einige Beispiele: </p>
+      <ul>
+        <li><a href="http://www.cadwerx.net/Products/CadXplorer/CxCadXplorer.asp">CAD Explorer</a></li>
+        <li><a href="http://www.pixvue.com/">PixVue</a></li>
+        <li><a href="http://www.tortoisecvs.org/">TortoiseCVS</a> </li>
+      </ul>      <p>Bemerkung: Die hier verwendeten Begriffe wurden einer deutschen Windows XP-Installation entnommen. Unter Windows 2000 sind die Bezeichnungen teilweise etwas anders.</p>
+      <h2> 2. Systemvorraussetzungen<a name="requirements"></a></h2>
+      <p> F &uuml;r diesen Plugin wird Total Commander 6.50  ben&ouml;tigt. <br>
+  Es werden die Betriebsysteme Windows 2000, XP und 2003 unterst&uuml;tzt.<br>
+  Wenn ShellDetails unter &auml;lteren Betriebssystemen installierst wird, werden keine Felder angeboten.</p>
+      <p>Unter Windows Vista und Windows 7 werden derzeit keine Shellerweiterungen unterst&uuml;tzt. </p>
+      <h2>3. Benutzung<a name="use"></a></h2>
+      <p>ShellDetails ist ein Inhaltsplugin. Alle Plugins dieses Typen k&ouml;nnen einheitlich benutzt werden. Eine &Uuml;bersicht &uuml;ber die Benutzung von Inhaltsplugins findet sich im <a href="http://www.ghisler.ch/wikide/index.php/Inhaltsplugins">Total Commander Wiki</a>. </p>
+      <h2>4. Konfiguration<a name="configuration"></a></h2>
+      <h3>4.1 Verzeichnisse zur Feldsuche<a name="fieldsearchdir"></a></h3>
+      <p>Welche Felder zur Anzeige verf&uuml;gbar sind, ist von Verzeichnis zu Verzeichnis unterschiedlich. Es gibt deshalb die M&ouml;glichkeit Verzeichnisse anzugeben, in denen nach Feldern gesucht wird. Zum  Beispiel werden die Felder, die das Programm TortoiseCVS zur Verf&uuml;gung stellt, nur in Verzeichnissen angeboten, die auch tats&auml;chlich  unter CVS-Kontrolle stehen. Wenn also TortoiseCVS benutzt wird und sich  C:\MeinProjekt unter CVS-Kontrolle befindet, dann sollte man in der Konfigurationsdatei Shelldetails.ini folgendes eintragen: </p>
+      <pre>[Directories]
+Dir_1=C:\MeinProjekt
+</pre>
+      <p>Es ist nicht notwendig zus&auml;tzlich noch ein Verzeichnis anzugeben, indem sich die &uuml;blichen Felder befinden. Wenn kein Verzeichnis angegeben wurde, verwendet ShellDetails das Windows-Verzeichnis zu Suche nach Feldern. </p>
+      <h3>4.2 Feldeinstellungen <a name="fieldsettings"></a></h3>
+      <p>ShellDetails wird eine Einstellungsdatei mit dem Namen ShellDetails.ini anlegen. Sie kann benutzt werden um Feldtypumwandlungen (castings), Berechnungen und andere Einstellungen durchzuf&uuml;hren. Jeder Abschnitt ist mit einem eindeutigen Namen benannt. Du musst und solltest die Abschnittsnamen nicht bearbeiten. Ein Abschnitt kann die folgenden Eintr&auml;ge einthalten.</p>
+      <table width="100%" border="0">
+        <tr>
+          <td width="20%"><strong>Standardwert</strong></td>
+          <td width="20%"><strong>M&ouml;gliche Werte</strong></td>
+          <td width="60%"><strong>Beschreibung</strong></td>
+        </tr>
+        <tr>
+          <td class="list">UseDefault=1</td>
+          <td class="list">0, 1</td>
+          <td class="list">Wenn man diesen Wert auf 0 setzt, dann werden Typumwandlungen und Berechnungen aktiviert. Andernfalls wird der Standardtyp benutzt.</td>
+        </tr>
+        <tr>
+          <td class="list">Cast=1</td>
+          <td class="list">2, 3, 4, 5</td>
+          <td class="list"><p>Wandelt den Feldtyp in eine anderen Feldtyp um. Unterst&uuml;tzte Feldtypen sind im Augenblick:<br>
+            Nummerisch --&gt; Datum<br>
+	    Nummerisch --&gt; Jahreszahl<br>
+            Nummerisch --&gt; Gleitkommazahl<br>
+            Zeichenkette --&gt; Nummerisch</p>
+            <p>Erlaubte Werte f&uuml;r den Zielfeldtyp sind nummerisch (2), Jahr (4) und Datum (5).</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="list">Operator=47</td>
+          <td class="list">47</td>
+          <td class="list">Der einzig erlaubte Wert ist 47, was dem Zeichen / entspricht. das bedeutet, dass Division, die derzeit einzig unterst&uuml;tzte Rechenoperation ist.</td>
+        </tr>
+        <tr>
+          <td class="list">Processing=0</td>
+          <td class="list"> <strong></strong>0, 1, 2, 3 </td>
+          <td class="list">Legt fest wie die Werte in einer benutzerdefinierten Spaltenansicht angezeigt werden.<br>
+            0=Wie im Explorer.<br>
+            1=Vordergrund<br>
+            2=Hintergrund automatisch <br>
+            3=Hintergrund bei Bedarf </td>
+        </tr>
+        <tr>
+          <td >Caption</td>
+          <td >&nbsp;</td>
+          <td >Die Bezeichnung, die der Benutzer im Total Commander sieht. </td>
+        </tr>
+      </table>
+      <p>Hier sind einige n&uuml;tzliche Beispiele f&uuml;r im Explorer eingebaute Felder:</p>
+      <pre>;Zeigt die Dateigr&ouml;&szlig;e in KB an.
+[{B725F130-47EF-101A-A5F1-02608C9EEBAC}12]
+UseDefault=0
+Cast=2
+Operator=47
+Operand=1024</pre>
+      <pre>;Zeigt die Dauer von Audio- oder Videodateien als Zeitwert an.
+[{64440490-4C8B-11D1-8B70-080036B11A03}3]
+UseDefault=0
+Cast=5
+Operator=47
+Operand=10000000</pre>
+      <pre>;Zeigt die Bitrate f&uuml;r Audiodateien als kbits/sec an. Das Feld wird als &quot;bei Bedarf&quot; angezeigt.
+[{64440490-4C8B-11D1-8B70-080036B11A03}4]
+UseDefault=0
+Cast=2
+Operator=47
+Operand=1000
+Processing=3</pre>
+      <pre>;Korrigiert den Explorer Fehler, der &quot;Aufgenommen am&quot; als String extrahiert.
+[{14B81DA1-0135-4D31-96D9-6CBFC9671A99}36867]
+UseDefault=0
+Cast=10</pre>
+      <pre>
+;Unbenannte Feldbezeichnung auf &quot;Breite&quot; ge&auml;ndert und in einen Zahlenwert umgewandelt.
+[{6444048F-4C8B-11D1-8B70-080036B11A03}3]<br>UseDefault=0<br>Caption=Breite<br>Cast=2
+
+
+;Wandelt das &quot;Fragment&quot;-Feld in einen nummerischen Wert um, um nach nach dem Feld suchen zu k&ouml;nnen.
+[{242ED098-D606-4FA8-9DDE-89AEDFE4EAD7}0]<br>Caption=Fragments<br>UseDefault=0<br>Cast=2<br>State=98</pre>
+
+<pre>;Jahreszahlen werden nicht länger als Zahlen, sondern als Jahr dargestellt. 
+;Es macht Sinn nur die Jahreszahl ohne Monat und Tag darzustellen. 
+;Das erreicht man durch [shelldetails.Jahr.Y].
+[{56A3372E-CE9C-11D2-9F0E-006097C686F6}5]
+Caption=Jahrr
+UseDefault=0
+Cast=4</pre>
+
+
+      <h3> 4.3 ShellDetails.ini Ort <a name="inilocation"></a></h3>
+      <ul>
+        <li>ShellDetails.ini wird standardm&auml;&szlig;ig im gleichen Verzeichnis wie die Datei Wincmd.ini gespeichert. Falls gew&uuml;nscht kann diese Datei auch in eins der folgenden Verzeichnisse verschoben werden:</li>
+        <li>Unterverzeichnis mit dem Namen &quot;ShellDetails&quot; relativ zu dem Verzeichnis, in dem sich die Datei Wincmd.ini befindet</li>
+        <li>Plugin-Verzeichnis</li>
+        <li> Total Commander Verzeichnis</li>
+      </ul>      
+      <h2>5. Probleml&ouml;sungen<a name="troubleshooting"></a></h2>
+      <ol>
+        <li><strong>Frage:</strong> Ein Feld wird vom Plugin nicht angeboten, aber kann im Windows Explorer ausgew&auml;hlt werden. Was kann ich tun?<br>
+          <strong>Antwort:</strong> Bitte mal im Abschnitt 3. Verzeichnisse zur Feldsuche nachschauen. In diesem Abschnitt ist erl&auml;utert, wie die fehlenden Felder erg&auml;nzt werden k&ouml;nnen. </li>
+        <li><strong>Frage:</strong> Ein Feld wird nicht angezeigt wie erwartet. Was kann ich tun?<br>
+          <strong>Antwort: </strong>Bitte starte den Windows Explorer und f&uuml;ge dort die Spalte hinzu. Wenn die Spaltenwerte hier auch nicht angezeigt werden, dann ist es definitv kein Fehler in ShellDetails. In allen anderen F&auml;llen bitte mir das Problem berichten.</li>
+      </ol>      
+      <h2>6. Bekannte Fehler und Einschr&auml;nkungen <a name="bugs_limitations"></a></h2>
+      <ol>
+        <li>Die Anzeige von Datumswertes weicht um ein paar Sekunden ab. Der Grund daf&uuml;r liegt in der Art und Weise wie die von Windows bereitgestellte Schnittstelle die Datumswerte speichert. Im Windows Explorer tritt das gleiche Problem auf. </li>
+        <li>Wenn sich in einem Verzeichnis nur eine Datei befindet und sich eine Dateiinformation &auml;ndert, so muss das Verzeichnis erneut betreten werden, um die Anzeige zu aktualisieren. </li>
+  </ol>      
+      <h2>7. Kontakt<a name="contact"></a></h2>
+      <p>Im <a href="http://www.ghisler.ch/">Total Commander Forum</a> steht ein <a href="http://www.ghisler.ch/board/viewtopic.php?t=9525">Thema</a> bereit, um Probleme, Fehler und Verbesserungsvorschl&auml;ge zu diskutieren.</p>
+</div>
+</body>
+</html>
