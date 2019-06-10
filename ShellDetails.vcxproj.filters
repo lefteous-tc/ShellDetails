@@ -47,9 +47,6 @@
     <ClInclude Include="ShellDetailsManager.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="ShellColumnInfo.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -83,5 +80,10 @@
     <ClInclude Include="..\Common\Reparse.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ShellDetails.rct">
+      <Filter>Ressourcendateien</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -181,10 +181,12 @@
     <ClInclude Include="..\Common\SectionManagerINIFile.h" />
     <ClInclude Include="..\Common\StringList.h" />
     <ClInclude Include="..\Common\WinAppHeader.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="ShellColumnInfo.h" />
     <ClInclude Include="ShellDetails.h" />
     <ClInclude Include="ShellDetailsManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ShellDetails.rct" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
