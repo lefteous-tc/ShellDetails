@@ -80,16 +80,19 @@
     <OutDir>.\package\</OutDir>
     <TargetName>$(ProjectName)</TargetName>
     <IntDir>$(SolutionDir)..\intermediate\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>.\package_debug\</OutDir>
     <IntDir>$(SolutionDir)..\intermediate\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
     <TargetExt>.wdx64</TargetExt>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IntDir>$(SolutionDir)..\intermediate\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
     <OutDir>.\package\</OutDir>
     <TargetExt>.wdx64</TargetExt>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -174,6 +177,7 @@
       <ProfileGuidedDatabase>$(IntDir)$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
       <ProgramDatabaseFile>$(IntDir)$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <ImportLibrary>$(IntDir)$(OutDir)$(TargetName).lib</ImportLibrary>
+      <ModuleDefinitionFile>exportw.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
